@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "時",
+  "version": "1.0.0",
+  "description": "一个美丽流畅的浏览器主页扩展，包含时间日期、搜索框、日历、书签、待办、笔记、一语、新闻等功能模块",
+  "permissions": [
+    "storage",
+    "bookmarks",
+    "notifications",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "時"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}

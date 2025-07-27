@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- 背景 -->
+  <rect width="512" height="512" rx="64" fill="#4a90e2" />
+  
+  <!-- 时钟 -->
+  <circle cx="256" cy="180" r="100" fill="white" />
+  <circle cx="256" cy="180" r="90" fill="#4a90e2" />
+  <circle cx="256" cy="180" r="5" fill="white" />
+  
+  <!-- 时针 -->
+  <line x1="256" y1="180" x2="256" y2="120" stroke="white" stroke-width="8" stroke-linecap="round" />
+  
+  <!-- 分针 -->
+  <line x1="256" y1="180" x2="300" y2="180" stroke="white" stroke-width="6" stroke-linecap="round" />
+  
+  <!-- 搜索框 -->
+  <rect x="106" y="320" width="300" height="50" rx="25" fill="white" />
+  
+  <!-- 搜索图标 -->
+  <circle cx="131" cy="345" r="15" fill="none" stroke="#4a90e2" stroke-width="6" />
+  <line x1="142" y1="356" x2="156" y2="370" stroke="#4a90e2" stroke-width="6" stroke-linecap="round" />
+  
+  <!-- 模块图标 -->
+  <circle cx="196" cy="420" r="20" fill="white" />
+  <circle cx="256" cy="420" r="20" fill="white" />
+  <circle cx="316" cy="420" r="20" fill="white" />
+</svg>

@@ -1,0 +1,364 @@
+/* 深色模式全局样式 */
+.dark-mode {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* 确保深色模式下的文本颜色 */
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
+  color: var(--text-color);
+}
+
+/* 确保深色模式下的链接颜色 */
+.dark-mode a {
+  color: var(--primary-color);
+}
+.dark-mode a:hover {
+  color: var(--primary-color-light);
+}
+.dark-mode a:visited {
+  color: #7986cb;
+}
+
+/* 确保深色模式下的输入框样式 */
+.dark-mode input, .dark-mode textarea, .dark-mode select {
+  background-color: var(--input-background, var(--card-background));
+  color: var(--input-text, var(--text-color));
+  border-color: var(--input-border, var(--border-color));
+}
+.dark-mode input::placeholder, .dark-mode textarea::placeholder {
+  color: var(--input-placeholder, var(--text-secondary-color));
+}
+.dark-mode input:focus, .dark-mode textarea:focus, .dark-mode select:focus {
+  border-color: var(--primary-color);
+  outline-color: var(--primary-color);
+}
+
+/* 确保深色模式下的按钮样式 */
+.dark-mode button {
+  background-color: var(--button-background, var(--card-background));
+  color: var(--button-text, var(--text-color));
+  border-color: var(--button-border, var(--border-color));
+}
+.dark-mode button:hover {
+  background-color: var(--button-hover-background, var(--hover-background));
+}
+.dark-mode button:disabled {
+  background-color: var(--disabled-background);
+  color: var(--disabled-text);
+  border-color: var(--disabled-border);
+}
+
+/* 确保深色模式下的卡片样式 */
+.dark-mode .card, .dark-mode [class*="Card"], .dark-mode [class*="card"] {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border-color: var(--border-color);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+/* 确保深色模式下的图标颜色 */
+.dark-mode svg {
+  color: var(--icon-color, var(--text-color));
+  fill: var(--icon-color, var(--text-color));
+}
+.dark-mode button:hover svg {
+  color: var(--primary-color);
+  fill: var(--primary-color);
+}
+
+/* 确保深色模式下的模态框样式 */
+.dark-mode .modal, .dark-mode [class*="Modal"], .dark-mode [class*="modal"] {
+  background-color: var(--modal-background, var(--card-background));
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+.dark-mode .modal-overlay, .dark-mode [class*="Overlay"], .dark-mode [class*="overlay"] {
+  background-color: var(--modal-overlay, rgba(0, 0, 0, 0.7));
+}
+
+/* 确保深色模式下的表格样式 */
+.dark-mode table {
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+.dark-mode th {
+  background-color: var(--card-background);
+}
+.dark-mode tr:nth-child(even) {
+  background-color: var(--item-background);
+}
+.dark-mode th, .dark-mode td {
+  border-color: var(--border-color);
+}
+
+/* 确保深色模式下的列表样式 */
+.dark-mode ul, .dark-mode ol {
+  color: var(--text-color);
+}
+.dark-mode li {
+  border-color: var(--border-color);
+}
+
+/* 确保深色模式下的分割线样式 */
+.dark-mode hr {
+  border-color: var(--border-color);
+}
+
+/* 确保深色模式下的滚动条样式 */
+.dark-mode ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.dark-mode ::-webkit-scrollbar-track {
+  background: var(--scrollbar-track, var(--background-color));
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb, var(--border-color));
+  border-radius: 4px;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover, var(--text-secondary-color));
+}
+
+/* 确保深色模式下的下拉菜单样式 */
+.dark-mode .dropdown, .dark-mode [class*="Dropdown"], .dark-mode [class*="dropdown"] {
+  background-color: var(--dropdown-background, var(--card-background));
+  color: var(--dropdown-text, var(--text-color));
+  border-color: var(--dropdown-border, var(--border-color));
+}
+
+.dark-mode .dropdown-item:hover, 
+.dark-mode [class*="DropdownItem"]:hover, 
+.dark-mode [class*="dropdown-item"]:hover {
+  background-color: var(--dropdown-hover, var(--hover-background));
+}
+
+/* 确保深色模式下的列表项样式 */
+.dark-mode .list-item, 
+.dark-mode [class*="ListItem"], 
+.dark-mode [class*="list-item"] {
+  background-color: var(--item-background, var(--card-background));
+  color: var(--text-color);
+  border-color: var(--item-border, var(--border-color));
+}
+
+.dark-mode .list-item:hover, 
+.dark-mode [class*="ListItem"]:hover, 
+.dark-mode [class*="list-item"]:hover {
+  background-color: var(--item-hover-background, var(--hover-background));
+}
+
+.dark-mode .list-item.active, 
+.dark-mode [class*="ListItem"].active, 
+.dark-mode [class*="list-item"].active {
+  background-color: var(--item-active-background, var(--primary-color-light));
+}
+
+/* 确保深色模式下的标签和徽章样式 */
+.dark-mode .tag, .dark-mode .badge,
+.dark-mode [class*="Tag"], .dark-mode [class*="Badge"],
+.dark-mode [class*="tag"], .dark-mode [class*="badge"] {
+  background-color: var(--tag-background, var(--card-background));
+  color: var(--tag-text, var(--text-color));
+}
+
+/* 确保深色模式下的提示和警告样式 */
+.dark-mode .info {
+  background-color: var(--info-color);
+  color: white;
+}
+
+.dark-mode .success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+.dark-mode .warning {
+  background-color: var(--warning-color);
+  color: white;
+}
+
+.dark-mode .error {
+  background-color: var(--error-color);
+  color: white;
+}
+
+/* 确保深色模式下的阴影效果 */
+.dark-mode .shadow, 
+.dark-mode [class*="Shadow"], 
+.dark-mode [class*="shadow"] {
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+/* 确保深色模式下的背景色 */
+.dark-mode .bg-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.dark-mode .bg-secondary {
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+/* 确保深色模式下的文本颜色 */
+.dark-mode .text-primary {
+  color: var(--primary-color);
+}
+
+.dark-mode .text-secondary {
+  color: var(--text-secondary-color);
+}
+
+/* 确保深色模式下的边框颜色 */
+.dark-mode .border {
+  border-color: var(--border-color);
+}
+
+/* 确保深色模式下的悬停效果 */
+.dark-mode .hover-effect:hover {
+  background-color: var(--hover-background);
+}
+
+/* 修复深色模式下的模块图标 */
+.dark-mode .module-icon {
+  color: var(--icon-color);
+  fill: var(--icon-color);
+}
+
+.dark-mode .module-icon.active {
+  color: white;
+  fill: white;
+}
+
+/* 修复深色模式下的搜索框 */
+.dark-mode .search-container {
+  background-color: var(--input-background, var(--card-background));
+  border-color: var(--input-border, var(--border-color));
+}
+
+.dark-mode .search-input {
+  color: var(--input-text, var(--text-color));
+}
+
+.dark-mode .search-button {
+  color: var(--icon-color);
+}
+
+/* 修复深色模式下的日历 */
+.dark-mode .calendar-container {
+  background-color: var(--card-background);
+}
+
+.dark-mode .calendar-header {
+  color: var(--text-color);
+}
+
+.dark-mode .calendar-day {
+  color: var(--text-color);
+}
+
+.dark-mode .calendar-day.other-month {
+  color: var(--text-secondary-color);
+}
+
+.dark-mode .calendar-day.today {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* 修复深色模式下的待办事项 */
+.dark-mode .todo-item {
+  background-color: var(--item-background);
+  color: var(--text-color);
+}
+
+.dark-mode .todo-item.completed {
+  text-decoration: line-through;
+  color: var(--text-secondary-color);
+}
+
+/* 修复深色模式下的笔记 */
+.dark-mode .note-item {
+  background-color: var(--item-background);
+  color: var(--text-color);
+}
+
+/* 修复深色模式下的新闻 */
+.dark-mode .news-item {
+  background-color: var(--item-background);
+  color: var(--text-color);
+}
+
+.dark-mode .news-date {
+  color: var(--text-secondary-color);
+}
+
+/* 修复深色模式下的书签 */
+.dark-mode .bookmark-item {
+  background-color: var(--item-background);
+  color: var(--text-color);
+}
+
+.dark-mode .bookmark-folder {
+  background-color: var(--item-background);
+  color: var(--text-color);
+}
+
+/* 修复深色模式下的设置面板 */
+.dark-mode .settings-panel {
+  background-color: var(--card-background);
+  color: var(--text-color);
+}
+
+.dark-mode .settings-section {
+  border-color: var(--border-color);
+}
+
+.dark-mode .settings-option {
+  border-color: var(--border-color);
+}
+
+/* 修复深色模式下的底部控制按钮 */
+.dark-mode .bottom-controls button {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* 修复深色模式下的模态框内容 */
+.dark-mode .modal-content {
+  background-color: var(--modal-background);
+  color: var(--text-color);
+}
+
+/* 修复深色模式下的表单元素 */
+.dark-mode .form-group label {
+  color: var(--text-color);
+}
+
+/* 修复深色模式下的切换开关 */
+.dark-mode .toggle-switch {
+  background-color: var(--item-background);
+}
+
+.dark-mode .toggle-switch.active {
+  background-color: var(--primary-color);
+}
+
+/* 修复深色模式下的颜色选择器 */
+.dark-mode .color-picker {
+  border-color: var(--border-color);
+}
+
+/* 修复深色模式下的时间显示 */
+.dark-mode .time-display {
+  color: var(--text-color);
+}
+
+.dark-mode .date-display {
+  color: var(--text-secondary-color);
+}

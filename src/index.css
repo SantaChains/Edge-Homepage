@@ -1,0 +1,210 @@
+/* 全局变量 */
+:root {
+  /* 亮色主题 */
+  --primary-color: #4a90e2;
+  --primary-color-light: rgba(74, 144, 226, 0.1);
+  --background-color: #ffffff;
+  --card-background: #f8f9fa;
+  --text-color: #333333;
+  --text-secondary-color: #666666;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --transition-speed: 0.3s;
+  --hover-background: #f0f0f0;
+  --icon-color: #555555;
+}
+
+/* 暗色主题 */
+[data-theme="dark"] {
+  --primary-color: #4a90e2;
+  --primary-color-light: rgba(74, 144, 226, 0.2);
+  --background-color: #121212;
+  --card-background: #1e1e1e;
+  --text-color: #e0e0e0;
+  --text-secondary-color: #a0a0a0;
+  --border-color: #444444;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --hover-background: #333333;
+  --icon-color: #cccccc;
+  
+  /* 确保所有模块在深色模式下有正确的背景色 */
+  --module-background: #2a2a2a;
+  --module-hover-background: #333333;
+  --module-active-background: #4a90e2;
+  --module-text: #e0e0e0;
+  --module-border: #444444;
+  
+  /* 确保按钮在深色模式下有正确的颜色 */
+  --button-background: #333333;
+  --button-text: #e0e0e0;
+  --button-border: #444444;
+  --button-hover-background: #444444;
+  
+  /* 输入框样式 */
+  --input-background: #2a2a2a;
+  --input-text: #e0e0e0;
+  --input-border: #444444;
+  --input-placeholder: #888888;
+  
+  /* 下拉菜单样式 */
+  --dropdown-background: #2a2a2a;
+  --dropdown-text: #e0e0e0;
+  --dropdown-border: #444444;
+  --dropdown-hover: #333333;
+  
+  /* 模态框样式 */
+  --modal-background: #1e1e1e;
+  --modal-overlay: rgba(0, 0, 0, 0.7);
+  
+  /* 滚动条样式 */
+  --scrollbar-track: #1e1e1e;
+  --scrollbar-thumb: #444444;
+  --scrollbar-thumb-hover: #555555;
+  
+  /* 卡片和列表项样式 */
+  --item-background: #2a2a2a;
+  --item-hover-background: #333333;
+  --item-active-background: #3a3a3a;
+  --item-border: #444444;
+  
+  /* 标签和徽章样式 */
+  --tag-background: #333333;
+  --tag-text: #e0e0e0;
+  
+  /* 提示和警告样式 */
+  --info-color: #4a90e2;
+  --success-color: #4caf50;
+  --warning-color: #ff9800;
+  --error-color: #f44336;
+  
+  /* 禁用状态样式 */
+  --disabled-background: #2a2a2a;
+  --disabled-text: #666666;
+  --disabled-border: #333333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+
+/* 背景容器样式覆盖，确保自定义背景显示 */
+html, body {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+#homepage-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--card-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-secondary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 通用动画类 */
+.fade-in {
+  animation: fadeIn var(--transition-speed) ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp var(--transition-speed) ease-in-out;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}

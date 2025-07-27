@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2024-01-01T00:00:00.000Z",
+  "settings": {
+    "theme": "light",
+    "backgroundType": "color",
+    "backgroundColor": "#ffffff",
+    "backgroundImage": "",
+    "backgroundOpacity": 1,
+    "backgroundBrightness": 1,
+    "backgroundBlur": 0,
+    "backgroundFit": "cover",
+    "textColor": "#000000",
+    "linkColor": "#4a90e2",
+    "fontFamily": "Arial, sans-serif",
+    "gradientType": "linear",
+    "gradientDirection": "to right",
+    "gradientColors": ["#4a90e2", "#9b59b6"],
+    "gradientStops": [0, 100],
+    "showBackground": true,
+    "startupModuleType": "last",
+    "startupModule": "quote"
+  },
+  "data": {
+    "lastActiveModule": "quote",
+    "bookmarks": [],
+    "todos": [],
+    "notes": [],
+    "calendar": {
+      "events": [],
+      "countdowns": []
+    },
+    "news": {
+      "sources": [],
+      "cache": []
+    }
+  },
+  "preferences": {
+    "autoSave": true,
+    "backupInterval": 24,
+    "maxBackups": 5,
+    "enableAnalytics": false
+  }
+}
