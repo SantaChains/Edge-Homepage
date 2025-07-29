@@ -44,7 +44,7 @@
 2. 运行 `npm install` 安装依赖
 3. 运行 `npm run build:extension` 构建扩展
 4. 打开Edge浏览器 → 扩展 → 开发者模式 → 加载已解压的扩展
-5. 选择 `build/extension` 文件夹
+5. 选择 `extension` 文件夹
 
 ## 🛠️ 开发指南
 
@@ -55,7 +55,7 @@
 ### 开发环境搭建
 ```bash
 # 克隆项目
-git clone [项目地址]
+git clone https://github.com/SantaChains/Edge-Homepage.git
 
 # 进入项目目录
 cd Edge-Homepage
